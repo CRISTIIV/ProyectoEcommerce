@@ -4,7 +4,7 @@ class calculadora:
     def __init__(self, master):
         self.master = master
         master.title("CALCULATOR 3000")
-        self.etiqueta = Label(master, text="Esta es la primera ventana!")
+        self.etiqueta = Label(master, text="Ingresa los dos valores a operar!")
         self.etiqueta.pack()
         self.botonSumar = Button(master, text="Sumar", command=self.sumar)
         self.botonSumar.pack()
