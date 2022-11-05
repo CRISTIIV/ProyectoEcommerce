@@ -17,7 +17,7 @@ class MiApp extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             Container(
-              child: Image.network('https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/PantallaINICIO%20PNG%20(sin%20botones)%20full.png'),
+              child: Image.network('https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/PantallaINICIO%20PNG%20full.png'),
             ),
           ],
         ),
