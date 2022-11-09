@@ -1,3 +1,4 @@
+import 'package:aplicacion_ecommerce_flutter/pages/paginaLogin.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -33,10 +34,9 @@ Widget cuerpo() {
         logo(),
         columnaBotones(),
         columnaBotones(),
-        campoUser(),
-        campoPass(),
-        botonRegistro(),
-        botonIngreso()
+        botonIngreso(),
+        botonGenerico(),
+        botonGenerico()
       ],
     )),
   );
@@ -51,72 +51,22 @@ Widget logo() {
           fontFamily: 'Pacifico'));
 }
 
-Widget campoUser() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-    child: TextField(
-      decoration: InputDecoration(
-          hintText: 'Usuario',
-          hintStyle: TextStyle(color: Colors.white),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white)),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white))),
-    ),
-  );
-}
-
-Widget campoPass() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-    child: TextField(
-      obscureText: true,
-      decoration: InputDecoration(
-          hintText: 'Contraseña',
-          hintStyle: TextStyle(color: Colors.white),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white)),
-          enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white)),
-          focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: Colors.white))),
-    ),
-  );
-}
-
 Widget botonIngreso() {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
     child: MaterialButton(
-      minWidth: 220.0,
-      height: 57.0,
-      onPressed: () {},
+      minWidth: 400.0,
+      height: 179.0,
+      onPressed: () => {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Login()))
+      },
       color: Color.fromARGB(255, 133, 0, 241),
-      child: Text("Ingresar", style: TextStyle(color: Colors.white)),
+      child: Text("Ir al login",
+          style: TextStyle(color: Colors.white), textScaleFactor: 1.5),
     ),
   );
 }
-
-//Widget botonGenerico() {return Container(child: MaterialButton(minWidth: 1,height: 400,onPressed: () {},color: Color.fromARGB(255, 255, 0, 0)),);}
-
-Widget botonRegistro() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-    child: CupertinoButton(
-        child: Text("Si no estás registrado, haz click aquí."),
-        onPressed: () {}),
-  );
-}
-
-//Widget boton() {return ElevatedButton(onPressed: () {}, child: Text("Hola"));}
 
 Widget botonGenerico() {
   return RawMaterialButton(onPressed: () {});
