@@ -23,12 +23,21 @@ Widget cuerpo() {
     decoration: BoxDecoration(
         image: DecorationImage(
             image: NetworkImage(
-                'https://p4.wallpaperbetter.com/wallpaper/234/931/827/texture-minimalism-wallpaper-preview.jpg'),
+                'https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/PantallaINICIO%20PNG%20(sin%20botones).png'),
             fit: BoxFit.cover)),
     child: Center(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[logo(), campoUser(), campoPass(), FilaBotones()],
+      children: <Widget>[
+        botonGenerico(),
+        logo(),
+        columnaBotones(),
+        columnaBotones(),
+        campoUser(),
+        campoPass(),
+        botonRegistro(),
+        botonIngreso()
+      ],
     )),
   );
 }
@@ -44,7 +53,7 @@ Widget logo() {
 
 Widget campoUser() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
     child: TextField(
       decoration: InputDecoration(
           hintText: 'Usuario',
@@ -64,7 +73,7 @@ Widget campoUser() {
 
 Widget campoPass() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
     child: TextField(
       obscureText: true,
       decoration: InputDecoration(
@@ -87,8 +96,8 @@ Widget botonIngreso() {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
     child: MaterialButton(
-      minWidth: 200.0,
-      height: 42.0,
+      minWidth: 220.0,
+      height: 57.0,
       onPressed: () {},
       color: Color.fromARGB(255, 133, 0, 241),
       child: Text("Ingresar", style: TextStyle(color: Colors.white)),
@@ -96,25 +105,36 @@ Widget botonIngreso() {
   );
 }
 
+//Widget botonGenerico() {return Container(child: MaterialButton(minWidth: 1,height: 400,onPressed: () {},color: Color.fromARGB(255, 255, 0, 0)),);}
+
 Widget botonRegistro() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 7),
-    child: MaterialButton(
-      minWidth: 200.0,
-      height: 42.0,
-      onPressed: () {},
-      color: Color.fromARGB(106, 140, 74, 195),
-      child: Text("Registrarse", style: TextStyle(color: Colors.white)),
-    ),
+    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+    child: CupertinoButton(
+        child: Text("Si no estás registrado, haz click aquí."),
+        onPressed: () {}),
   );
 }
 
-Widget FilaBotones() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+//Widget boton() {return ElevatedButton(onPressed: () {}, child: Text("Hola"));}
+
+Widget botonGenerico() {
+  return RawMaterialButton(onPressed: () {});
+}
+
+Widget columnaBotones() {
+  return Column(
+    mainAxisSize: MainAxisSize.max,
+    crossAxisAlignment: CrossAxisAlignment.center,
     children: <Widget>[
-      botonRegistro(),
-      botonIngreso(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico(),
+      botonGenerico()
     ],
   );
 }
