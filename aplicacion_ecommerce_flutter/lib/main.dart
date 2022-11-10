@@ -1,8 +1,9 @@
 import 'package:aplicacion_ecommerce_flutter/pages/paginaLogin.dart';
+import 'package:aplicacion_ecommerce_flutter/pages/paginaRegistro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/*
+///*
 void main() => runApp(MiApp());
 
 class MiApp extends StatelessWidget {
@@ -87,10 +88,10 @@ Widget columnaBotones() {
     ],
   );
 }
-*/
+//*/
 
 //PAGINA LOGIN
-///*
+/*
 void main() => runApp(Login());
 
 class Login extends StatelessWidget {
@@ -232,7 +233,7 @@ Widget fotoLogo() {
         'https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/NEKOSTORE%20PNG.png'),
   );
 }
-//*/
+*/
 
 //PAGINA REGISTRO
 /*
