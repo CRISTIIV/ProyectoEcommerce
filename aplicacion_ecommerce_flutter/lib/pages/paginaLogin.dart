@@ -5,14 +5,13 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Ecommerce',
         home: Scaffold(
-          body: Column(
-            children: <Widget>[
-              cuerpo(),
-            ],
-          ),
-        ));
+      body: Column(
+        children: <Widget>[
+          cuerpo(),
+        ],
+      ),
+    ));
   }
 }
 
