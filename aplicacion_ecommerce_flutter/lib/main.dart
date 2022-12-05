@@ -1,5 +1,5 @@
-import 'package:aplicacion_ecommerce_flutter/pages/paginaLogin.dart';
-import 'package:aplicacion_ecommerce_flutter/pages/paginaRegistro.dart';
+//import 'package:aplicacion_ecommerce_flutter/pages/paginaLogin.dart';
+//import 'package:aplicacion_ecommerce_flutter/pages/paginaRegistro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -236,7 +236,7 @@ Widget fotoLogo() {
 */
 
 //PAGINA REGISTRO
-/*
+///*
 void main() => runApp(Registro());
 
 class Registro extends StatelessWidget {
@@ -265,6 +265,8 @@ Widget cuerpo() {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        botonGenerico(),
+        botonGenerico(),
         botonGenerico(),
         logo(),
         botonGenerico(),
@@ -464,10 +466,10 @@ Widget fotoLogo() {
         'https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/NEKOSTORE%20PNG.png'),
   );
 }
-*/
+//*/
 
 //PAGINA ADMIN
-///*
+/*
 
 void main() => runApp(AdminPage());
 
@@ -549,4 +551,4 @@ Widget logo() {
 Widget botonGenerico() {
   return RawMaterialButton(onPressed: () {});
 }
-//*/
+*/
