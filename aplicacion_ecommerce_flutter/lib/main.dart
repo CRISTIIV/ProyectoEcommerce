@@ -467,7 +467,7 @@ Widget fotoLogo() {
 */
 
 //PAGINA ADMIN
-/*
+///*
 
 void main() => runApp(AdminPage());
 
@@ -549,4 +549,4 @@ Widget logo() {
 Widget botonGenerico() {
   return RawMaterialButton(onPressed: () {});
 }
-*/
+//*/
