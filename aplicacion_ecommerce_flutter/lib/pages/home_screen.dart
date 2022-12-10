@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/pages/signin_screen.dart';
-import 'package:ecommerce_app/utils/color_utils.dart';
+import 'package:aplicacion_ecommerce_flutter/pages/signin_screen.dart';
+import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
