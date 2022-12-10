@@ -1,7 +1,7 @@
-import 'package:ecommerce_app/pages/home_screen.dart';
-import 'package:ecommerce_app/pages/signup_screen.dart';
-import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
-import 'package:ecommerce_app/utils/color_utils.dart';
+import 'package:aplicacion_ecommerce_flutter/pages/home_screen.dart';
+import 'package:aplicacion_ecommerce_flutter/pages/signup_screen.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/reusable_widget.dart';
+import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
