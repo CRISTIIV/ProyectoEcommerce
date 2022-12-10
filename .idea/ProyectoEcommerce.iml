@@ -6,6 +6,12 @@
       <excludeFolder url="file://$MODULE_DIR$/aplicacion_ecommerce_flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/aplicacion_ecommerce_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/aplicacion_ecommerce_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_image_slider/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_image_slider/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_image_slider/build" />
+      <excludeFolder url="file://$MODULE_DIR$/login_with_signup/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/login_with_signup/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/login_with_signup/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

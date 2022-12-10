@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../utils/dimensions.dart';
+
 class BigText extends StatelessWidget {
   Color? color;
   final String text;
@@ -25,6 +27,6 @@ class BigText extends StatelessWidget {
             color: color,
             fontWeight: FontWeight.w400,
             fontFamily: 'Roboto',
-            fontSize: size));
+            fontSize: Dimensions.font20));
   }
 }
