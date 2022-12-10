@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/*
+///*
 void main() => runApp(MiApp());
 
 class MiApp extends StatelessWidget {
@@ -88,7 +88,7 @@ Widget columnaBotones() {
     ],
   );
 }
-*/
+//*/
 
 //PAGINA LOGIN
 /*
@@ -236,7 +236,7 @@ Widget fotoLogo() {
 */
 
 //PAGINA REGISTRO
-///*
+/*
 void main() => runApp(Registro());
 
 class Registro extends StatelessWidget {
@@ -466,7 +466,7 @@ Widget fotoLogo() {
         'https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/NEKOSTORE%20PNG.png'),
   );
 }
-//*/
+*/
 
 //PAGINA ADMIN
 /*
