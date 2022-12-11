@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../../utils/dimensions.dart';
 import '../../widgets/small_text.dart';
 
 class ProductPageBody extends StatefulWidget {
@@ -18,7 +19,7 @@ class ProductPageBodyState extends State<ProductPageBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currPageValue = 0.0;
   double _scaleFactor = 0.8;
-  double _height = 220;
+  double _height = Dimensions.pageViewContainer;
 
   @override
   void initState() {
@@ -39,8 +40,9 @@ class ProductPageBodyState extends State<ProductPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        //slider section
         Container(
-          height: 320,
+          height: Dimensions.pageView,
           child: PageView.builder(
             controller: pageController,
             itemCount: 5,
@@ -49,16 +51,119 @@ class ProductPageBodyState extends State<ProductPageBody> {
             }),
           ),
         ),
+        //dots
         new DotsIndicator(
             dotsCount: 5,
             position: _currPageValue,
             decorator: DotsDecorator(
-              activeColor : Color.fromARGB(157, 32, 192, 197),
+              activeColor: Color.fromARGB(157, 32, 192, 197),
               size: const Size.square(9.0),
               activeSize: const Size(18.0, 9.0),
               activeShape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5.0)),
-            ))
+            )),
+        //other products
+        SizedBox(
+          height: Dimensions.height30,
+        ),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: "Popular"),
+              SizedBox(width: Dimensions.width10),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigText(text: ".", color: Colors.black26),
+              ),
+              SizedBox(width: Dimensions.width10),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: SmallText(text: "Products"),
+              ),
+              //List of products and images
+            ],
+          ),
+        ),
+        //List of products
+        Container(
+            height: 900,
+            child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                //shrinkWrap: true,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Container(
+                      margin: EdgeInsets.only(
+                          left: Dimensions.width20,
+                          right: Dimensions.width20,
+                          bottom: Dimensions.height10),
+                      child: Row(
+                        children: [
+                          Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                      Dimensions.radius20),
+                                  color: Colors.white38,
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(
+                                          "assets/images/NEKOSTORE PNG.png")))),
+                          //text container
+                          Expanded(
+                            child: Container(
+                              height: 100,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.only(
+                                    topRight:
+                                        Radius.circular(Dimensions.radius20),
+                                    bottomRight:
+                                        Radius.circular(Dimensions.radius20)),
+                                color: Colors.white,
+                              ),
+                              child: Padding(
+                                  padding: EdgeInsets.only(
+                                      left: Dimensions.width10,
+                                      right: Dimensions.width10),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      BigText(
+                                          text: "Gigabyte Nvidia Geforce 3070"),
+                                      SizedBox(height: Dimensions.height10),
+                                      SmallText(text: "32 Tflops"),
+                                      SizedBox(height: Dimensions.height10),
+                                      Row(
+                                        children: [
+                                          IconAndText(
+                                              icon: Icons.circle_sharp,
+                                              text: "Normal",
+                                              iconColor: Color.fromARGB(
+                                                  255, 103, 179, 41)),
+                                          IconAndText(
+                                              icon: Icons.location_on,
+                                              text: "1.7km",
+                                              iconColor: Color.fromARGB(
+                                                  255, 65, 129, 202)),
+                                          IconAndText(
+                                              icon: Icons.access_time_rounded,
+                                              text: "32min",
+                                              iconColor: Color.fromARGB(
+                                                  255, 185, 30, 103))
+                                        ],
+                                      )
+                                    ],
+                                  )),
+                            ),
+                          )
+                        ],
+                      ));
+                }))
       ],
     );
   }
@@ -93,10 +198,11 @@ class ProductPageBodyState extends State<ProductPageBody> {
       transform: matrix,
       child: Stack(children: [
         Container(
-          height: 220,
-          margin: EdgeInsets.only(left: 10, right: 10),
+          height: Dimensions.pageViewContainer,
+          margin: EdgeInsets.only(
+              left: Dimensions.width10, right: Dimensions.width10),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
               color: index.isEven
                   ? Color.fromARGB(255, 103, 195, 221)
                   : Color(0xFF9294cc),
@@ -107,10 +213,13 @@ class ProductPageBodyState extends State<ProductPageBody> {
         Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-                height: 120,
-                margin: EdgeInsets.only(left: 30, right: 30, bottom: 30),
+                height: Dimensions.pageViewContainer,
+                margin: EdgeInsets.only(
+                    left: Dimensions.width30,
+                    right: Dimensions.width30,
+                    bottom: Dimensions.height30),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -121,14 +230,15 @@ class ProductPageBodyState extends State<ProductPageBody> {
                       BoxShadow(color: Colors.white, offset: Offset(5, 0))
                     ]),
                 child: Container(
-                    padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+                    padding: EdgeInsets.only(
+                        top: Dimensions.height15,
+                        left: Dimensions.width15,
+                        right: Dimensions.width15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         BigText(text: "Product 1"),
-                        SizedBox(
-                          height: 10,
-                        ),
+                        SizedBox(height: Dimensions.height10),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -140,16 +250,16 @@ class ProductPageBodyState extends State<ProductPageBody> {
                                           Color.fromARGB(255, 103, 195, 221))),
                             ),
                             SizedBox(
-                              width: 10,
+                              width: Dimensions.width10,
                             ),
                             SmallText(text: "4.5"),
-                            SizedBox(width: 10),
+                            SizedBox(width: Dimensions.width10),
                             SmallText(text: "1287"),
-                            SizedBox(width: 10),
+                            SizedBox(width: Dimensions.width10),
                             SmallText(text: "comments"),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: Dimensions.height20),
                         Row(
                           children: [
                             IconAndText(
