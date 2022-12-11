@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
-import 'package:ecommerce_app/utils/color_utils.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/reusable_widget.dart';
+import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
 class Buy extends StatefulWidget {
@@ -25,13 +25,14 @@ class _BuyState extends State<Buy> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            hexStringToColor("5E61F4"),
-            hexStringToColor("9546C4"),
-            Colors.black
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-          child: SingleChildScrollView(
-            child: Padding(padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+            gradient: LinearGradient(colors: [
+          hexStringToColor("5E61F4"),
+          hexStringToColor("9546C4"),
+          Colors.black
+        ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/NEKOSTORE PNG.png"),

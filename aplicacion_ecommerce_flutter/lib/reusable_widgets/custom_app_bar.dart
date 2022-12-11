@@ -1,6 +1,7 @@
-import 'package:ecommerce_app/utils/color_utils.dart';
+import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:shop_app/constants.dart';
 
 import '../../../size_config.dart';
@@ -58,7 +59,7 @@ class CustomAppBar extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 5),
-                  Icon(icon: Icons.star, color: Colors.white),
+                  Icon(Icons.star, color: Colors.white),
                 ],
               ),
             )

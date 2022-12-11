@@ -1,5 +1,5 @@
-import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
-import 'package:ecommerce_app/utils/color_utils.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/reusable_widget.dart';
+import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
 class EditProfile extends StatefulWidget {
@@ -12,7 +12,7 @@ class EditProfile extends StatefulWidget {
 class _EditProfileState extends State<EditProfile> {
   TextEditingController _usernameTextController = TextEditingController();
   TextEditingController _passwordTextController = TextEditingController();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +28,19 @@ class _EditProfileState extends State<EditProfile> {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            hexStringToColor("5E61F4"),
-            hexStringToColor("9546C4"),
-            Colors.black
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-          child: SingleChildScrollView(
-            child: Padding(padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+            gradient: LinearGradient(colors: [
+          hexStringToColor("5E61F4"),
+          hexStringToColor("9546C4"),
+          Colors.black
+        ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/NEKOSTORE PNG.png"),
-                UserDataModifier(context, _usernameTextController, _passwordTextController)
+                UserDataModifier(
+                    context, _usernameTextController, _passwordTextController)
               ],
             ),
           ),

@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/Product.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/body.dart';
+import 'package:aplicacion_ecommerce_flutter/reusable_widgets/custom_app_bar.dart';
 
-import '../../models/Product.dart';
-import 'components/body.dart';
-import 'components/custom_app_bar.dart';
+import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
   static String routeName = "/details";
