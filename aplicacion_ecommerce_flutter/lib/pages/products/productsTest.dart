@@ -1,4 +1,5 @@
 import 'package:aplicacion_ecommerce_flutter/pages/products/paginaProductos.dart';
+import 'package:aplicacion_ecommerce_flutter/pages/products/products.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: PaginaProductos(),
+      home: Producto(),
     );
   }
 }

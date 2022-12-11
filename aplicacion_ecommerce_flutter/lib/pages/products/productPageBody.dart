@@ -2,8 +2,6 @@ import 'package:aplicacion_ecommerce_flutter/widgets/big_text.dart';
 import 'package:aplicacion_ecommerce_flutter/widgets/icon_and_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 import '../../utils/dimensions.dart';
 import '../../widgets/small_text.dart';
@@ -87,83 +85,79 @@ class ProductPageBodyState extends State<ProductPageBody> {
           ),
         ),
         //List of products
-        Container(
-            height: 900,
-            child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                //shrinkWrap: true,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Container(
-                      margin: EdgeInsets.only(
-                          left: Dimensions.width20,
-                          right: Dimensions.width20,
-                          bottom: Dimensions.height10),
-                      child: Row(
-                        children: [
-                          Container(
-                              width: 120,
-                              height: 120,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(
-                                      Dimensions.radius20),
-                                  color: Colors.white38,
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: AssetImage(
-                                          "assets/images/NEKOSTORE PNG.png")))),
-                          //text container
-                          Expanded(
-                            child: Container(
-                              height: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                    topRight:
-                                        Radius.circular(Dimensions.radius20),
-                                    bottomRight:
-                                        Radius.circular(Dimensions.radius20)),
-                                color: Colors.white,
-                              ),
-                              child: Padding(
-                                  padding: EdgeInsets.only(
-                                      left: Dimensions.width10,
-                                      right: Dimensions.width10),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
+
+        ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return Container(
+                  margin: EdgeInsets.only(
+                      left: Dimensions.width20,
+                      right: Dimensions.width20,
+                      bottom: Dimensions.height10),
+                  child: Row(
+                    children: [
+                      Container(
+                          width: Dimensions.listViewImgSize,
+                          height: Dimensions.listViewImgSize,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(Dimensions.radius20),
+                              color: Colors.white38,
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage(
+                                      "assets/images/NEKOSTORE PNG.png")))),
+                      //text container
+                      Expanded(
+                        child: Container(
+                          height: Dimensions.listViewTextContSize,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(Dimensions.radius20),
+                                bottomRight:
+                                    Radius.circular(Dimensions.radius20)),
+                            color: Colors.white,
+                          ),
+                          child: Padding(
+                              padding: EdgeInsets.only(
+                                  left: Dimensions.width10,
+                                  right: Dimensions.width10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  BigText(text: "Gigabyte Nvidia Geforce 3070"),
+                                  SizedBox(height: Dimensions.height10),
+                                  SmallText(text: "32 Tflops"),
+                                  SizedBox(height: Dimensions.height10),
+                                  Row(
                                     children: [
-                                      BigText(
-                                          text: "Gigabyte Nvidia Geforce 3070"),
-                                      SizedBox(height: Dimensions.height10),
-                                      SmallText(text: "32 Tflops"),
-                                      SizedBox(height: Dimensions.height10),
-                                      Row(
-                                        children: [
-                                          IconAndText(
-                                              icon: Icons.circle_sharp,
-                                              text: "Normal",
-                                              iconColor: Color.fromARGB(
-                                                  255, 103, 179, 41)),
-                                          IconAndText(
-                                              icon: Icons.location_on,
-                                              text: "1.7km",
-                                              iconColor: Color.fromARGB(
-                                                  255, 65, 129, 202)),
-                                          IconAndText(
-                                              icon: Icons.access_time_rounded,
-                                              text: "32min",
-                                              iconColor: Color.fromARGB(
-                                                  255, 185, 30, 103))
-                                        ],
-                                      )
+                                      IconAndText(
+                                          icon: Icons.circle_sharp,
+                                          text: "Normal",
+                                          iconColor: Color.fromARGB(
+                                              255, 103, 179, 41)),
+                                      IconAndText(
+                                          icon: Icons.location_on,
+                                          text: "1.7km",
+                                          iconColor: Color.fromARGB(
+                                              255, 65, 129, 202)),
+                                      IconAndText(
+                                          icon: Icons.access_time_rounded,
+                                          text: "32min",
+                                          iconColor:
+                                              Color.fromARGB(255, 185, 30, 103))
                                     ],
-                                  )),
-                            ),
-                          )
-                        ],
-                      ));
-                }))
+                                  )
+                                ],
+                              )),
+                        ),
+                      )
+                    ],
+                  ));
+            })
       ],
     );
   }
