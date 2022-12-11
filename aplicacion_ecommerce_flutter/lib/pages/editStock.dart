@@ -2,14 +2,17 @@ import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
 import 'package:ecommerce_app/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
-class UserPage extends StatefulWidget {
-  const UserPage({Key? key}) : super(key: key);
+class EditStock extends StatefulWidget {
+  const EditStock({Key? key}) : super(key: key);
 
   @override
-  _UserPageState createState() => _UserPageState();
+  _EditStockState createState() => _EditStockState();
 }
 
-class _UserPageState extends State<UserPage> {
+class _EditStockState extends State<EditStock> {
+  TextEditingController _priceTextController = TextEditingController();
+  TextEditingController _stockTextController = TextEditingController();
+  TextEditingController _productNameTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,7 @@ class _UserPageState extends State<UserPage> {
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/NEKOSTORE PNG.png"),
-                UserOptions(context)
+                StockModifier(context,_stockTextController, _priceTextController, _productNameTextController),
               ],
             ),
           ),

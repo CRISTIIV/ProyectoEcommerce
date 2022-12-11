@@ -1,81 +1,46 @@
-import 'package:flutter/cupertino.dart';
+import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
+import 'package:ecommerce_app/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
-class AdminPage extends StatelessWidget {
+class AdminPage extends StatefulWidget {
+  const AdminPage({Key? key}) : super(key: key);
+
+  @override
+  _AdminPageState createState() => _AdminPageState();
+}
+
+class _AdminPageState extends State<AdminPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Ecommerce',
-        home: Scaffold(
-          body: Column(
-            children: <Widget>[
-              cuerpo(),
-            ],
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: <Widget>[
+          optionsBar2(context),
+        ],
+      ),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            hexStringToColor("5E61F4"),
+            hexStringToColor("9546C4"),
+            Colors.black
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          child: SingleChildScrollView(
+            child: Padding(padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
+            child: Column(
+              children: <Widget>[
+                logoWidget("assets/images/NEKOSTORE PNG.png"),
+                AdminOptions(context)
+              ],
+            ),
           ),
-        ));
+        ),
+      ),
+    );
   }
-}
-
-Widget cuerpo() {
-  return Container(
-    decoration: BoxDecoration(
-        image: DecorationImage(
-            image: NetworkImage(
-                'https://raw.githubusercontent.com/CRISTIIV/ProyectoEcommerce/master/PantallaINICIO%20PNG%20(sin%20botones).png'),
-            fit: BoxFit.cover)),
-    child: Center(
-        child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        botonGenerico(),
-        botonGenerico(),
-        logo(),
-        botonGenerico(),
-        botonGenerico(),
-        stockAdminister(),
-        userAdminister(),
-      ],
-    )),
-  );
-}
-
-Widget stockAdminister() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 13.5),
-    child: MaterialButton(
-      minWidth: 400.0,
-      height: 100.0,
-      onPressed: () {},
-      color: Color.fromARGB(255, 133, 0, 241),
-      child: Text("Administrar stock",
-          style: TextStyle(color: Colors.white), textScaleFactor: 1.5),
-    ),
-  );
-}
-
-Widget userAdminister() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 13.5),
-    child: MaterialButton(
-      minWidth: 400.0,
-      height: 100.0,
-      onPressed: () {},
-      color: Color.fromARGB(255, 133, 0, 241),
-      child: Text("Administrar usuarios",
-          style: TextStyle(color: Colors.white), textScaleFactor: 1.5),
-    ),
-  );
-}
-
-Widget logo() {
-  return Text("NEKO STORE",
-      style: TextStyle(
-          color: Colors.white,
-          fontSize: 40,
-          fontWeight: FontWeight.bold,
-          fontFamily: 'Pacifico'));
-}
-
-Widget botonGenerico() {
-  return RawMaterialButton(onPressed: () {});
 }

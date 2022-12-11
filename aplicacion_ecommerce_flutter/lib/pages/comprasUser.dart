@@ -2,14 +2,14 @@ import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
 import 'package:ecommerce_app/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
-class UserPage extends StatefulWidget {
-  const UserPage({Key? key}) : super(key: key);
+class Buy extends StatefulWidget {
+  const Buy({Key? key}) : super(key: key);
 
   @override
-  _UserPageState createState() => _UserPageState();
+  _BuyState createState() => _BuyState();
 }
 
-class _UserPageState extends State<UserPage> {
+class _BuyState extends State<Buy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +35,7 @@ class _UserPageState extends State<UserPage> {
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/NEKOSTORE PNG.png"),
-                UserOptions(context)
+                BuyHistory(context)
               ],
             ),
           ),

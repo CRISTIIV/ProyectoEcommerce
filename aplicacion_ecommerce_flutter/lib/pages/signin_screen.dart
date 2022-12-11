@@ -1,7 +1,8 @@
-import 'package:aplicacion_ecommerce_flutter/pages/home_screen.dart';
-import 'package:aplicacion_ecommerce_flutter/pages/signup_screen.dart';
-import 'package:aplicacion_ecommerce_flutter/reusable_widgets/reusable_widget.dart';
-import 'package:aplicacion_ecommerce_flutter/utils/color_utils.dart';
+import 'package:ecommerce_app/pages/home_screen.dart';
+import 'package:ecommerce_app/pages/paginaAdmin.dart';
+import 'package:ecommerce_app/pages/signup_screen.dart';
+import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
+import 'package:ecommerce_app/utils/color_utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,6 @@ class _SignInScreenState extends State<SignInScreen>{
 
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
-
 
   @override
   Widget build(BuildContext context){
@@ -49,12 +49,16 @@ class _SignInScreenState extends State<SignInScreen>{
               ),
               signInSingUpButton(context, true, () {
                 if (_emailTextController.text == "admin@admin.admin" && _passwordTextController.text == "admin123"){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));//AdminPage()));
+                  _emailTextController.clear();
+                  _passwordTextController.clear();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AdminPage()));//AdminPage()));
                 }
                 else{
                   FirebaseAuth.instance.signInWithEmailAndPassword(
                   email: _emailTextController.text, 
                   password: _passwordTextController.text).then((value) {
+                    _emailTextController.clear();
+                    _passwordTextController.clear();
                     Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");

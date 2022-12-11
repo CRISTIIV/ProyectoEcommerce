@@ -2,14 +2,15 @@ import 'package:ecommerce_app/reusable_widgets/reusable_widget.dart';
 import 'package:ecommerce_app/utils/color_utils.dart';
 import 'package:flutter/material.dart';
 
-class UserPage extends StatefulWidget {
-  const UserPage({Key? key}) : super(key: key);
+class UserModifier extends StatefulWidget {
+  const UserModifier({Key? key}) : super(key: key);
 
   @override
-  _UserPageState createState() => _UserPageState();
+  _UserModifierState createState() => _UserModifierState();
 }
 
-class _UserPageState extends State<UserPage> {
+class _UserModifierState extends State<UserModifier> {
+  TextEditingController _userEmailTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +36,7 @@ class _UserPageState extends State<UserPage> {
             child: Column(
               children: <Widget>[
                 logoWidget("assets/images/NEKOSTORE PNG.png"),
-                UserOptions(context)
+                AdminUserOptions(context),
               ],
             ),
           ),
