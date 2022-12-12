@@ -1,0 +1,40 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "trips",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userRef",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "cancelTrip",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "upcoming",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tripBeginDate",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "reviews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "productRef",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ratingCreated",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
