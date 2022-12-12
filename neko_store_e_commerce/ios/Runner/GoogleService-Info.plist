@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>706477733455-0sjdjkrnjg4ira1kk0usj092p70mbh2e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.706477733455-0sjdjkrnjg4ira1kk0usj092p70mbh2e</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>706477733455-qvplqjsbk7u8o5lrtsoa6g3l85epi0in.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDUegiFGONswBRFxWr_Muu0Px4KoLUDpHs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>706477733455</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nekostore.homeU</string>
+	<key>PROJECT_ID</key>
+	<string>neko-ecommerce</string>
+	<key>STORAGE_BUCKET</key>
+	<string>neko-ecommerce.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:706477733455:ios:4c1e6557dab8d850861c3a</string>
+</dict>
+</plist>
