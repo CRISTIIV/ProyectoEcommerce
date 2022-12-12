@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "706477733455",
+    "project_id": "neko-ecommerce",
+    "storage_bucket": "neko-ecommerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706477733455:android:c7b2da055a64065a861c3a",
+        "android_client_info": {
+          "package_name": "com.nekostore.homeU"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706477733455-qvplqjsbk7u8o5lrtsoa6g3l85epi0in.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nekostore.homeU",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "706477733455-uvrskeqc9bp9npbdbd0nf38liqsd0cjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGlWjERcR4ihKwEKlOSfjTeARa5Kg-RTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706477733455-uvrskeqc9bp9npbdbd0nf38liqsd0cjo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "706477733455-0sjdjkrnjg4ira1kk0usj092p70mbh2e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nekostore.homeU"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
